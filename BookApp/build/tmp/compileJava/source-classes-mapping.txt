@@ -1,0 +1,16 @@
+org/liftoff/BookApp/models/dto/RegisterFormDTO.java
+ org.liftoff.BookApp.models.dto.RegisterFormDTO
+org/liftoff/BookApp/models/AbstractEntity.java
+ org.liftoff.BookApp.models.AbstractEntity
+org/liftoff/BookApp/BookAppApplication.java
+ org.liftoff.BookApp.BookAppApplication
+org/liftoff/BookApp/data/UserRepository.java
+ org.liftoff.BookApp.data.UserRepository
+org/liftoff/BookApp/models/dto/LoginFormDTO.java
+ org.liftoff.BookApp.models.dto.LoginFormDTO
+org/liftoff/BookApp/models/User.java
+ org.liftoff.BookApp.models.User
+org/liftoff/BookApp/controllers/HomeController.java
+ org.liftoff.BookApp.controllers.HomeController
+org/liftoff/BookApp/controllers/AuthenticationController.java
+ org.liftoff.BookApp.controllers.AuthenticationController
