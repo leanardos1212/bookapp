@@ -13,6 +13,12 @@
         <p class="error" th:errors="${registerFormDTO.username}"></p>
     </div>
     <div class="form-group">
+        <label>Email
+            <input class="form-control" th:field="${registerFormDTO.communication}" />
+        </label>
+        <p class="error" th:errors="${registerFormDTO.communication}"></p>
+    </div>
+    <div class="form-group">
         <label>Password
             <input class="form-control" th:field="${registerFormDTO.password}" type="password" />
         </label>

@@ -12,9 +12,13 @@ public class AbstractEntity {
     @GeneratedValue
     private int id;
 
+    public AbstractEntity() {
+    }
+
     public int getId() {
         return id;
     }
+
 
     @Override
     public boolean equals(Object o) {

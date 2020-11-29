@@ -22,6 +22,7 @@ public class AuthenticationController {
 
     @Autowired
     UserRepository userRepository;
+
     private static final String userSessionKey = "user";
 
     public User getUserFromSession(HttpSession session) {
@@ -76,7 +77,7 @@ public class AuthenticationController {
             return "register";
         }
 
-        User newUser = new User(registerFormDTO.getUsername(), registerFormDTO.getPassword());
+        User newUser = new User(registerFormDTO.getUsername(), registerFormDTO.getPassword(), registerFormDTO.getCommunication() );
         userRepository.save(newUser);
         setUserInSession(request.getSession(), newUser);
 
