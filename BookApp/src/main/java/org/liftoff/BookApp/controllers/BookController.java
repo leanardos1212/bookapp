@@ -2,6 +2,7 @@ package org.liftoff.BookApp.controllers;
 
 import org.liftoff.BookApp.data.BookRepository;
 import org.liftoff.BookApp.models.Book;
+import org.liftoff.BookApp.models.dto.BookFormDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,17 +23,18 @@ public class BookController {
 
     @GetMapping({"add"})
     public String displayAddBookForm(Model model) {
-        model.addAttribute(new Book());
+        model.addAttribute(new BookFormDTO());
         return "books/add";
     }
 
     @PostMapping({"add"})
-    public String processAddBookForm(@ModelAttribute @Valid Book newBook, Errors errors, Model model) {
+    public String processAddBookForm(@ModelAttribute @Valid BookFormDTO bookFormDTO, Errors errors, Model model) {
         if (errors.hasErrors()) {
             model.addAttribute("title", "Add Book");
             return "books/add";
         } else {
-            this.bookRepository.save(newBook);
+            Book newBook = new Book(bookFormDTO.getTitle(), bookFormDTO.getGenre() ,bookFormDTO.getAuthor());
+            bookRepository.save(newBook);
             return "redirect:../";
         }
     }

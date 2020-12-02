@@ -1,8 +1,7 @@
 package org.liftoff.BookApp.models;
 
-import com.sun.istack.NotNull;
-
 import javax.persistence.Entity;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Book extends AbstractEntity {

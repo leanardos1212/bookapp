@@ -1,6 +1,6 @@
 package org.liftoff.BookApp.models;
 
-import com.sun.istack.NotNull;
+import javax.validation.constraints.NotNull;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.Entity;

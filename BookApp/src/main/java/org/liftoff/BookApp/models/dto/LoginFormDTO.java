@@ -18,18 +18,6 @@ public class LoginFormDTO {
     @Size(min = 5, max = 30, message = "Invalid password. Must be between 5 and 30 characters.")
     private String password;
 
-    @NotNull
-    @NotBlank
-    @Email
-    private String communication;
-
-    public String getCommunication() {
-        return communication;
-    }
-
-    public void setCommunication(String communication) {
-        this.communication = communication;
-    }
 
     public String getUsername() {
         return username;
