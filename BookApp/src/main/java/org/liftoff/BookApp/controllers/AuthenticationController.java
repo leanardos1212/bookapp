@@ -84,6 +84,8 @@ public class AuthenticationController {
         return "redirect:";
     }
 
+
+
     @GetMapping("/login")
     public String displayLoginForm(Model model) {
         model.addAttribute(new LoginFormDTO());
